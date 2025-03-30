@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
@@ -14,15 +14,31 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({}); // State to hold error messages
 
-  
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setForm({ ...form, [name]: value });
+    setErrors({ ...errors, [name]: "" }); // Clear error when user types
   };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!form.name) newErrors.name = "Please enter your name.";
+    if (!form.email) newErrors.email = "Please enter your email.";
+    if (!form.message) newErrors.message = "Please enter a message.";
+    return newErrors;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const validationErrors = validateForm();
+    
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors); // Set errors if validation fails
+      return; // Stop submission
+    }
+
     setLoading(true);
     
     emailjs
@@ -45,13 +61,13 @@ const Contact = () => {
           name: "",
           email: "",
           message: "",
-        })
+        });
       },
       (error) => {
-        setLoading(false)
+        setLoading(false);
         console.log(error);
-        alert("Something went wrong.")
-      })
+        alert("Something went wrong.");
+      });
   };
 
   return (
@@ -77,6 +93,7 @@ const Contact = () => {
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.name && <span className="text-red-500">{errors.name}</span>} {/* Error message */}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
@@ -88,6 +105,7 @@ const Contact = () => {
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.email && <span className="text-red-500">{errors.email}</span>} {/* Error message */}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
@@ -99,6 +117,7 @@ const Contact = () => {
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.message && <span className="text-red-500">{errors.message}</span>} {/* Error message */}
           </label>
           <button
             type="submit"
