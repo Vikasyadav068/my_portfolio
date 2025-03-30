@@ -1,11 +1,13 @@
+
+import android from "../assets/android.png";
+import java from "../assets/java.png";
+import bootstrap from "../assets/bootstrap.png";
+
 import {
   mobile,
   backend,
   creator,
   web,
-  // android,
-  // bootstrap,
-  // java,
   javascript,
   ExpressJs,
   SQL,
@@ -114,18 +116,18 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  // {
-  //   name: "android",
-  //   icon: android,
-  // },
-  // {
-  //   name: "bootstrap",
-  //   icon: bootstrap,
-  // },
-  // {
-  //   name: "java",
-  //   icon: java,
-  // },
+  {
+    name: "android",
+    icon: android,
+  },
+  {
+    name: "bootstrap",
+    icon: bootstrap,
+  },
+  {
+    name: "java",
+    icon: java,
+  },
   {
     name: "figma",
     icon: figma,
@@ -225,4 +227,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, educations, projects };
+export {services, technologies, educations, projects };
