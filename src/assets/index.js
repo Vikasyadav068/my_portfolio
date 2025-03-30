@@ -23,7 +23,7 @@ import ExpressJs from "./tech/ExpressJs.png";
 import threejs from "./tech/threejs.png";
 
 import sage from "./company/sage.png";
-import CBSE from "./company/cbse.png";
+import cbse from "./company/cbse.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
