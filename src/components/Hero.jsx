@@ -14,23 +14,24 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        <div className="flex items-center gap-4">
-          {/* ✅ Bigger Name & Profile Image */}
-          <h1 className="text-[48px] font-extrabold text-white">
+        <div className="flex flex-col items-start gap-2">
+          {/* Name Text with Custom Class for Responsive Size */}
+          <h1 className="text-[48px] font-extrabold text-white custom-text-size">
             Hi, I'm <span className="text-[#915eff]">Vikas</span>
           </h1>
-          <img 
-            src={profile} 
-            alt="Vikas Profile" 
-            className="w-20 h-20 rounded-full border-4 border-[#915eff]" // ✅ Bigger Image
-          />
+          {/* Smaller Web & Android Developer Text */}
+          <p className="text-[16px] mt-2 text-white-100">
+            Web & Android Developer || <br className="sm:block hidden" />
+            UI/UX Designer.
+          </p>
         </div>
 
-        {/* ✅ Smaller Web & Android Developer Text */}
-        <p className="text-[16px] mt-2 text-white-100">
-          Web & Android Developer || <br className="sm:block hidden" />
-          UI/UX Designer.
-        </p>
+        {/* Profile Image */}
+        <img 
+          src={profile} 
+          alt="Vikas Profile" 
+          className="w-20 h-20 rounded-full border-4 border-[#915eff]" // Profile Image
+        />
       </div>
 
       <ComputersCanvas />
@@ -46,6 +47,14 @@ const Hero = () => {
           </div>
         </a>
       </div>
+
+      <style jsx>{`
+        @media (max-width: 700px) {
+          .custom-text-size {
+            font-size: 28px; /* Reduced size by 20px from 48px */
+          }
+        }
+      `}</style>
     </section>
   );
 };
