@@ -206,7 +206,7 @@ const projects = [
     source_code_link: "https://github.com/Vikasyadav068",
   },
   {
-    name: "Solay System",
+    name: "Solar System",
     description:
       "This project simulates the motion of planets revolving around the Sun, while the Moon orbits the Earth. Built using HTML, CSS, and JavaScript, it visually represents planetary motion with smooth animations. The system follows predefined orbital paths, creating a dynamic and engaging experience.",
     tags: [
