@@ -163,20 +163,20 @@ const educations = [
 
 const projects = [
   {
-    name: "Subscription Plan Mgmt.",
+    name: "Krishika E-Commerce Application for Farmers",
     description:
-      "Successfully completed subscription management project with seamless payment, user-friendly frontend, and a coupon code system for enhanced user satisfaction and engagement.",
+      "Krishika is an e-commerce app that empowers farmers to buy/sell crops, check market prices, and scan for AI-powered crop insights. With a secure payment gateway and robust tech stack (Java, XML, Firebase), it streamlines agriculture for a smarter, more profitable future. ",
     tags: [
       {
-        name: "react",
+        name: "XML",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Java",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Firebase",
         color: "pink-text-gradient",
       },
     ],
