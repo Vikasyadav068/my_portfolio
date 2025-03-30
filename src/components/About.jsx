@@ -42,7 +42,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        "I am a skilled Android Developer with a strong command over mobile app development, 
+        I am a skilled Android Developer with a strong command over mobile app development, 
         specializing in creating high-performance and user-friendly applications. Additionally, 
         I am proficient in web technologies and familiar with the MERN stack, enabling me to
          build dynamic and responsive web applications. 

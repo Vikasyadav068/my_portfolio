@@ -2,6 +2,10 @@
 import android from "../assets/android.png";
 import java from "../assets/java.png";
 import bootstrap from "../assets/bootstrap.png";
+import solar from "../assets/solar.png";
+import krishika from "../assets/krishika_.jpg";
+import attendance from "../assets/attendance.png";
+
 
 import {
   mobile,
@@ -23,9 +27,6 @@ import {
   figma,
   sage,
   cbse,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
 } from "../assets";
 
@@ -165,7 +166,7 @@ const projects = [
   {
     name: "Krishika E-Commerce Application for Farmers",
     description:
-      "Krishika is an e-commerce app that empowers farmers to buy/sell crops, check market prices, and scan for AI-powered crop insights. With a secure payment gateway and robust tech stack (Java, XML, Firebase), it streamlines agriculture for a smarter, more profitable future. ",
+      "Krishika is an e-commerce app that empowers farmers to buy/sell crops, check market prices.With a secure payment gateway,it streamlines agriculture for a smarter,more profitable future. ",
     tags: [
       {
         name: "XML",
@@ -180,49 +181,49 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: krishika,
     source_code_link: "https://github.com/Vikasyadav068",
   },
   {
-    name: "User Authentication",
+    name: "Face Attendance System",
     description:
-      "Implemented robust user authentication with Gmail, emphasizing security through salting, session cookies, and OAuth 2.0. Highlights include unique salting and seamless user experience.",
+      " The system captures student images, uploads them to a cloud database, and marks attendance after verifying the identity using face recognition. Students can also view their last marked attendance with a photo and check their previous attendance history (date & time only).",
     tags: [
       {
-        name: "ejs",
+        name: "XML",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Java",
         color: "green-text-gradient",
       },
       {
-        name: "google-Oauth",
+        name: "Firebase",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: attendance,
     source_code_link: "https://github.com/Vikasyadav068",
   },
   {
-    name: "Tinder Clone",
+    name: "Solay System",
     description:
-      "Created a MERN Stack Tinder-Clone, honing skills in MongoDB, Express.js, React, and Node.js. Built a seamless user experience, gaining practical insights for dynamic applications. Ready for new challenges!",
+      "This project simulates the motion of planets revolving around the Sun, while the Moon orbits the Earth. Built using HTML, CSS, and JavaScript, it visually represents planetary motion with smooth animations. The system follows predefined orbital paths, creating a dynamic and engaging experience.",
     tags: [
       {
-        name: "react",
+        name: "HTML",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "CSS",
         color: "green-text-gradient",
       },
       {
-        name: "express",
+        name: "Javascript",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: solar,
     source_code_link: "https://github.com/Vikasyadav068",
   },
 ];
