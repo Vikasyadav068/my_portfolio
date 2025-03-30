@@ -39,6 +39,9 @@ const Contact = () => {
       return; // Stop submission
     }
 
+    // Log the form data to the console
+    console.log("Form Data Submitted:", form);
+
     setLoading(true);
     
     emailjs
