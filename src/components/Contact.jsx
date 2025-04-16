@@ -11,10 +11,10 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    message: "",
+    mescollege: "",
   });
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState({}); // State to hold error messages
+  const [errors, setErrors] = useState({}); // State to hold error mescolleges
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,7 +26,7 @@ const Contact = () => {
     const newErrors = {};
     if (!form.name) newErrors.name = "Please enter your name.";
     if (!form.email) newErrors.email = "Please enter your email.";
-    if (!form.message) newErrors.message = "Please enter a message.";
+    if (!form.mescollege) newErrors.mescollege = "Please enter a mescollege.";
     return newErrors;
   };
 
@@ -53,7 +53,7 @@ const Contact = () => {
           to_name: "",
           from_email: form.email,
           to_email: "edu.qaj9876@gmail.com",
-          message: form.message,
+          mescollege: form.mescollege,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
@@ -63,7 +63,7 @@ const Contact = () => {
         setForm({
           name: "",
           email: "",
-          message: "",
+          mescollege: "",
         });
       },
       (error) => {
@@ -96,7 +96,7 @@ const Contact = () => {
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
-            {errors.name && <span className="text-red-500">{errors.name}</span>} {/* Error message */}
+            {errors.name && <span className="text-red-500">{errors.name}</span>} {/* Error mescollege */}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
@@ -108,19 +108,19 @@ const Contact = () => {
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
-            {errors.email && <span className="text-red-500">{errors.email}</span>} {/* Error message */}
+            {errors.email && <span className="text-red-500">{errors.email}</span>} {/* Error mescollege */}
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
+            <span className="text-white font-medium mb-4">Your Mescollege</span>
             <textarea
               rows="5"
-              name="message"
-              value={form.message}
+              name="mescollege"
+              value={form.mescollege}
               onChange={handleChange}
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
-            {errors.message && <span className="text-red-500">{errors.message}</span>} {/* Error message */}
+            {errors.mescollege && <span className="text-red-500">{errors.mescollege}</span>} {/* Error mescollege */}
           </label>
           <button
             type="submit"

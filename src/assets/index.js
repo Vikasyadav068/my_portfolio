@@ -22,7 +22,7 @@ import Firebase from "./tech/Firebase.png";
 import ExpressJs from "./tech/ExpressJs.png";
 import threejs from "./tech/threejs.png";
 
-import sage from "./company/sage.png";
+import college from "./company/college.png";
 import cbse from "./company/cbse.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -51,7 +51,7 @@ export {
   SQL,
   Firebase,
   threejs,
-  sage,
+  college,
   cbse,
   carrent,
   jobit,

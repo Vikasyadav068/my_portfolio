@@ -5,6 +5,8 @@ import bootstrap from "../assets/bootstrap.png";
 import solar from "../assets/solar.png";
 import krishika from "../assets/krishika_.jpg";
 import attendance from "../assets/attendance.png";
+import college from "../assets/college.png"; // ✅ Add this new import
+
 
 
 import {
@@ -25,10 +27,10 @@ import {
   mongodb,
   git,
   figma,
-  sage,
   cbse,
   threejs,
 } from "../assets";
+
 
 export const navLinks = [
   {
@@ -138,28 +140,21 @@ const technologies = [
 const educations = [
   {
     title: "Bachelor of Technology ( CSE )",
-    company_name: "SAGE University Bhopal",
-    icon: sage,
+    company_name: "Bhopal",
+    icon: college,
     iconBg: "#383E56",
     date: "August 2022 - Current",
-    points: ["Semester 1st - SGPA - 8.5", "Semester 2nd - SGPA - 8.48","Semester 3rd - SGPA - 9.33", "Semester 4th - SGPA - 9.21"],
+    points: ["Semester 1st - SGPA - 8.5", "Semester 2nd - SGPA - 8.48","Semester 3rd - SGPA - 9.33", "Semester 4th - SGPA - 9.21","Semester 5th - SGPA - 9.1","Semester 6th - SGPA - "],
   },
   {
     title: "Bal Bharti School Prayagraj",
     company_name: "CBSE",
     icon: cbse,
     iconBg: "#E6DEDD",
-    date: "June 2020 - March 2022",
-    points: ["Class 12th - 83.80%", "Class 10th - 84%"],
+    date: "June 2014- March 2022",
+    points: ["Class 12th - 83.80%", "Class 10th - 84%","Class V - XII"],
   },
-  {
-    title: "Bal Bharti School Prayagraj",
-    company_name: "CBSE",
-    icon: cbse,
-    iconBg: "#E6DEDD",
-    date: "June 2014 - March 2022",
-    points: ["Class V - XII"],
-  },
+  
 ];
 
 const projects = [
